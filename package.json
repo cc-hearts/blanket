@@ -1,0 +1,24 @@
+{
+  "name": "blanket",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "个人开发环境脚本集（bun + mise）",
+  "scripts": {
+    "agents": "bun pkg/update-agents.ts",
+    "perm": "bun scripts/permissions.ts",
+    "agents:check": "bun pkg/update-agents.ts --check",
+    "agents:dry": "bun pkg/update-agents.ts --dry-run",
+    "agents:json": "bun pkg/update-agents.ts --json --dry-run",
+    "agents:mise": "bun pkg/update-agents.ts --mise",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "latest"
+  },
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}
